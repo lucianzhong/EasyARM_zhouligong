@@ -1,0 +1,9 @@
+Steps:
+
+Ubuntu:
+1. make
+2. sudo cp hello /home/nfs/
+
+EasyArm:
+3.cd /mnt/
+4. ./hello (chmod +x hello)

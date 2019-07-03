@@ -1,0 +1,1 @@
+cmd_/home/zy/Desktop/EasyArm/hello/hello_driver/hello.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/zy/Desktop/EasyArm/hello/hello_driver/hello.ko /home/zy/Desktop/EasyArm/hello/hello_driver/hello.o /home/zy/Desktop/EasyArm/hello/hello_driver/hello.mod.o ;  true

@@ -1,0 +1,12 @@
+
+EasyArm:
+
+echo 1 >/sys/class/leds/led-err/brightness #控制LED点亮
+echo 0 >/sys/class/leds/led-err/brightness #控制LED熄灭
+
+
+./led led-run
+
+
+
+使用”小节， LinuxLinuxLinux 内核的 LEDLED 子系统为每个 子系统为每个 子系统为每个 LEDLED 设备都在 设备都在 /sys/class/leds//sys/class/leds/ /sys/class/leds/ /sys/class/leds/ /sys/class/leds/ /sys/class/leds/ /sys/class/leds//sys/class/leds/ /sys/class/leds/目录提供了操作接口。 目录提供了操作接口。 目录提供了操作接口。 目录提供了操作接口。 LEDLED 设 备可以通过设 备可以通过设 备可以通过设 备可以通过置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置不同的触发方式而具有功能。 置
