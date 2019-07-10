@@ -1,0 +1,26 @@
+ 12. NFS配置
+
+ls
+https://blog.csdn.net/czcdcdsn/article/details/78996412
+
+#/etc/init.d/nfs-kernel-server start    //方法一
+
+
+在Virtual Host上测试NFS服务
+	在Virtual Host 的终端中输入“cd /home/nfs”进入NFS服务的共享目录，然后输入命令“mkdir a b c d”在NFS服务的共享目录下创建a、b、c、d四个空目录，
+	
+	使用“mkdir -p /mnt/nfs_test”命令创建NFS服务的共享目录的测试挂载点目录，这时使用命令“ls /mnt/nfs_test”查看挂载点目录为空。
+	在Virtual Host 的终端中输入“ifconfig eth0 ”查看Virtual Host 的IP地址（当前Virtual Host 的IP为192.168.1.110）。
+	在Virtual Host的终端中输入命令“mount -t nfs 192.168.1.110:/home/nfs /mnt/nfs_test -o nolock” ，
+	将Virtual Host 上NFS服务共享的目录挂载到Virtual Host 的测试挂载点/mnt/nfs_test上，这时使用命令“ls /mnt/nfs_test”查看挂载点目录，内容与/home/nfs相同
+
+
+
+在Target Board的终端中输入命令“mount -t nfs 172.20.4.101:/home/nfs /mnt -o nolock”，
+将virtual Host上的NFS共享目录挂载到Target Board的/mnt上。在Target Board的/mnt/目录下可以看到readme.txt文件
+
+
+steps:
+
+1. arm-fsl-linux-gnueabi-gcc hello.c -o hello
+2. sudo cp hello /home/nfs/
